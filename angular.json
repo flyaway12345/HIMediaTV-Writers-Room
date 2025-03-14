@@ -14,7 +14,7 @@
           "options": {
             "configFile": "vite.config.ts",
             "main": "src/main.ts",
-            "outputPath": "dist/client",
+            "outputPath": "dist/",
             "tsConfig": "tsconfig.app.json"
           },
           "defaultConfiguration": "production",
@@ -47,6 +47,14 @@
         },
         "test": {
           "builder": "@analogjs/vitest-angular:test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://flyaway12345.github.io/HIMediaTV-Writers-Room/",
+            "name": "HI Media Creations"
+            // "cname": "thewaitingplace.org"
+          }
         }
       }
     }
